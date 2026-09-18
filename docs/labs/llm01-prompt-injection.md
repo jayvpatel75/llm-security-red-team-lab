@@ -63,6 +63,7 @@ payload = {
     "options": {"temperature": 0.2},
     "stream": True
 }
+```
 
 The restaurant restrictions exist only as natural-language text in SYSTEM_PROMPT. Although the application provides those instructions separately to the model, they are not an application-level security boundary. The model still receives the attacker's unrestricted prompt and can follow the competing instruction to change roles.
 
