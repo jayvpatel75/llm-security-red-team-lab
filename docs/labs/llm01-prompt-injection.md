@@ -35,7 +35,9 @@ The assistant was intended to operate as Fry-Day Junction Restaurant's chatbot.
 
 **Observed result:** The assistant responded with restaurant menu information, including appetizers, salads, pasta, risotto, desserts, and children’s menu options.
 
-**Evidence:** `evidence/llm01/01-baseline-restaurant-assistant.png`
+**Evidence:**
+
+![Baseline restaurant assistant](../../evidence/llm01/01-baseline-restaurant-assistant.png)
 
 ## Exploit attempt — Direct role override
 
@@ -49,7 +51,9 @@ The assistant was intended to operate as Fry-Day Junction Restaurant's chatbot.
 
 **Impact:** An attacker could make a business assistant provide unauthorized, irrelevant, or unsafe responses.  
 
-**Evidence:** `evidence/llm01/02-direct-role-override.png`
+**Evidence:**
+
+![Direct role override](../../evidence/llm01/02-direct-role-override.png)
 
 ## Root cause
 
@@ -69,7 +73,9 @@ The restaurant restrictions exist only as natural-language text in SYSTEM_PROMPT
 
 The application also embeds the user prompt to retrieve restaurant context from docs.txt; however, retrieval selects relevant context and does not validate whether the user's requested task is authorized. The root cause is therefore direct prompt injection, not a vector-store vulnerability.
 
-**Evidence:** `evidence/llm01/03-llm01-source-code-review.png`
+**Evidence:**
+
+![LLM01 source code review](../../evidence/llm01/03-llm01-source-code-review.png)
 
 ## Technical analysis
 
