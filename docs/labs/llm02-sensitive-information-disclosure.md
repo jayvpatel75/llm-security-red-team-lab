@@ -41,8 +41,7 @@ Evaluate whether a public-facing school chatbot could disclose restricted inform
 The chatbot returned a scholarship-program overview and stated that it would not disclose student names. However, it also disclosed program operating-budget and scholarship-disbursement figures. This was not a direct PII disclosure, but it shows insufficient data minimization for a public-facing chatbot.
 
 **Evidence**
-
-`evidence/llm02/01-baseline-public-information.png`
+![Baseline public information](../../evidence/llm02/01-baseline-public-information.png)
 
 ## Exploitation 1 — Student-record disclosure
 
@@ -62,7 +61,7 @@ An unauthenticated attacker could use authority impersonation to obtain sensitiv
 
 **Evidence**
 
-`evidence/llm02/02-unauthorized-pii-disclosure.png`
+![Unauthorized pii disclosure](../../evidence/llm02/02-unauthorized-pii-disclosure.png)
 
 ## Exploitation 2 — Administrative credential disclosure
 
@@ -82,7 +81,7 @@ In a production environment, exposed administrative credentials could enable una
 
 **Evidence**
 
-`evidence/llm02/03-unauthorized-credential-disclosure.png`
+![Unauthorized credential disclosure](../../evidence/llm02/03-unauthorized-credential-disclosure.png)
 
 ## Technical analysis and root cause
 
@@ -102,7 +101,7 @@ Although `SYSTEM_PROMPT` instructs the model not to disclose confidential data, 
 
 **Evidence**
 
-`evidence/llm02/04-llm02-source-code-review.png`
+![llm02 source code review](../../evidence/llm02/04-llm02-source-code-review.png)
 
 ## Attack path
 
